@@ -1,5 +1,5 @@
 import os
-print("Hi")
+
 def balance(weights):
     passed = False
     leftTotal = 0
