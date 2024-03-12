@@ -1,4 +1,5 @@
 import os
+from random import choice
 
 def balance(weights):
     passed = False
@@ -86,7 +87,7 @@ coins = {
 
 # FAKE COIN DEFINING, YOU NEED TO EDIT THIS TO MOVE THE COUNTERFEIT
 # Index position 0 marks which coin to target, position 1 dictates whether it's light or heavy
-fakeCoin = ["A", "H"]
+fakeCoin = [choice(["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"]), choice(["H", "L"])]
 
 guessed = False
 count = 0
@@ -103,7 +104,7 @@ while not guessed and count <= 2:
 print("A B C D E F G H I J K L")
 print(f"{coins["A"]} {coins["B"]} {coins["C"]} {coins["D"]} {coins["E"]} {coins["F"]} {coins["G"]} {coins["H"]} {coins["I"]} {coins["J"]} {coins["K"]} {coins["L"]}")
 
-guess = input("What coin do you think it is?\n> ")
+guess = input("What coin do you think it is?\n> ").upper()
 if guess == fakeCoin[0]:
     print("You got it!")
 else:
